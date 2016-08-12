@@ -1,17 +1,17 @@
 var net = require('net');
 
 var client = net.connect({
-		port : 8124
-	}, function () { //'connect' listener
-		console.log('client connected');
-		client.write('world!\r\n');
-	});
+  port: 8124
+}, function () { //'connect' listener
+  console.log('client connected');
+  client.write('world!\r\n');
+});
 
 client.on('data', function (data) {
-	console.log('data--> ' + data.toString());
-	client.end();
+  console.log('data--> ' + data.toString());
+  client.end();
 });
 
 client.on('end', function () {
-	console.log('client disconnected');
+  console.log('client disconnected');
 });

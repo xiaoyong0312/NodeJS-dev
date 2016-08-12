@@ -18,8 +18,8 @@ var assert = require('assert');
  */
 
 // ok()
-console.log('ok()--> ' + assert.ok('100', 'would not show me !') );
-console.log( assert.ok('100', 'would not show me !') );
+console.log('ok()--> ' + assert.ok('100', 'would not show me !'));
+console.log(assert.ok('100', 'would not show me !'));
 
 // equal()
 console.log('equal()--> ' + assert.equal(Math.max(1, 100), 100)); // 一旦assert.equal()不满足期望，将会报出AssertionError异常；

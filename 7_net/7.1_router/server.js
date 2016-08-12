@@ -6,11 +6,11 @@ router.addRoute('/about', require('./routers/about'));
 router.addRoute('/contact', require('./routers/contact'));
 
 function onListened() {
-	console.log('Node server starts at 3000.');
+  console.log('Node server starts at 3000.');
 }
 
 function onConnected(request, response) {
-	router.handleRoute(request.url, request, response);
+  router.handleRoute(request.url, request, response);
 }
 
 var server = http.createServer(onConnected);

@@ -2,11 +2,11 @@ let mySql = require('mysql');
 
 let conn = mySql.createConnection({
   //mySql 连接信息；
-	host: '172.21.4.155',
-    port: 3306,
-    user: 'ehome',
-    password: 'root',
-    database: 'ehomedb'
+  host: '172.21.4.155',
+  port: 3306,
+  user: 'ehome',
+  password: 'root',
+  database: 'ehomedb'
 });
 
 conn.table('xxxx').find(query).skip(0).limit(20)

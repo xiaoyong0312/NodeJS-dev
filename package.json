@@ -1,25 +1,25 @@
 {
-	"name" : "nodeExamples",
-	"version" : "0.0.1",
-	"description" : "test examples",
-	"script" : {
-		"build" : "npm install && webpack --webpack.config.js -w",
-		"product" : "npm install && webpack --webpack.config.js",
-		"test" : "npm install && webpack --webpack.config.js"
-	},
-	"dependencies" : {
-		"classnames" : "^2.1.3",
-		"iflux" : "^1.1.5",
-		"scriptjs" : "2.5.7",
-		"immutable" : "^3.7.4",
-		"react" : "^0.14.3",
-		"iconv-lite" : "^0.4.13",
-		"mocha" : "2.3.4",
-		"should" : "8.1.1",
-		"webpack" : "1.9.1"
-	},
-	"devDependencies" : {
-		"babel-loader" : "^5.3.1"
-	},
-	"author" : "xuyong"
+  "name": "nodeExamples",
+  "version": "0.0.1",
+  "description": "test examples",
+  "script": {
+    "build": "npm install && webpack --webpack.config.js -w",
+    "product": "npm install && webpack --webpack.config.js",
+    "test": "npm install && webpack --webpack.config.js"
+  },
+  "dependencies": {
+    "classnames": "^2.1.3",
+    "iflux": "^1.1.5",
+    "scriptjs": "2.5.7",
+    "immutable": "^3.7.4",
+    "react": "^0.14.3",
+    "iconv-lite": "^0.4.13",
+    "mocha": "2.3.4",
+    "should": "8.1.1",
+    "webpack": "1.9.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^5.3.1"
+  },
+  "author": "xuyong"
 }
