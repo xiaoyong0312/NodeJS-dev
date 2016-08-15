@@ -30,24 +30,24 @@ RESTful Web 服务通常可以通过自动客户端或代表用户的应用程�
 四. 创建 RESTful
 首先，创建一个 json 数据资源文件 users.json，内容如下：
 {
-   "user1" : {
-    "name" : "mahesh",
-	  "password" : "password1",
-	  "profession" : "teacher",
-	  "id": 1
-   },
-   "user2" : {
-    "name" : "suresh",
-	  "password" : "password2",
-	  "profession" : "librarian",
-	  "id": 2
-   },
-   "user3" : {
-    "name" : "ramesh",
-	  "password" : "password3",
-	  "profession" : "clerk",
-	  "id": 3
-   }
+  "user1": {
+    "name": "Apache",
+    "password": "Apache",
+    "profession": "No.1",
+    "id": 1
+  },
+  "user2": {
+    "name": "Babel",
+    "password": "Babel",
+    "profession": "No.2",
+    "id": 2
+  },
+  "user3": {
+    "name": "Coffee",
+    "password": "Coffee",
+    "profession": "No.3",
+    "id": 3
+  }
 }
 
 
