@@ -23,7 +23,7 @@ app.get('/listUsers', function (req, res) {
 
     console.log('typeof data-->>' + typeof data);
 
-    /*res.writeHead(200, {"Content-Type": "text/html;charset:utf-8"});
+    /*res.writeHead(200, {"Content-Type": "application/json;charset:utf-8"});
      res.write(data);
      res.end();*/
   });

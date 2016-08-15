@@ -2,7 +2,9 @@ node server.js
 各项 操作按照 具体的URL;
 
 
-0. http://www.runoob.com/nodejs/nodejs-restful-api.html
+0.1. restful基础说明 http://www.runoob.com/nodejs/nodejs-restful-api.html
+0.2. restful详细介绍 http://www.runoob.com/w3cnote/restful-architecture.html
+0.3. restful讨论 http://www.ruanyifeng.com/blog/2011/09/restful
 
 
 一. 什么是 REST？
