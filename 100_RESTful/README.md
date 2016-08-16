@@ -7,8 +7,8 @@ node server.js
 0.3. restful讨论 http://www.ruanyifeng.com/blog/2011/09/restful
 
 
-一. 什么是 REST？
-REST即 表述性状态传递（英文：Representational State Transfer，简称REST）是Roy Fielding博士在2000年他的博士论文中提出来的一种软件架构风格。
+一. 什么是 REST？ (Representational State Transfer 我对这个词组的翻译是"表现层状态转化")
+REST即 表述性状态传递/表述性状态转移（英文：Representational State Transfer，简称REST）是Roy Fielding博士在2000年他的博士论文中提出来的一种软件架构风格。
 表述性状态转移是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是RESTful。需要注意的是，REST是设计风格而不是标准。
 REST通常基于使用HTTP，URI，和XML（标准通用标记语言下的一个子集）以及HTML（标准通用标记语言下的一个应用）这些现有的广泛流行的协议和标准。
 REST 通常使用 JSON 数据格式。
@@ -50,7 +50,8 @@ RESTful Web 服务通常可以通过自动客户端或代表用户的应用程�
   }
 }
 
-
+五. REST无状态的理解:
+http://blog.csdn.net/u014511737/article/details/46966735
 
 
 
