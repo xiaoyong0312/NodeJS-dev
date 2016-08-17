@@ -1,11 +1,15 @@
 var http = require("http");
+var port = 3000;
 
 http.createServer(function (request, response) {
   response.writeHead(200, {"Content-Type": "text/html;charset:utf-8"});
-  response.write("this is nodeServer.js, port 3000 ");
-  response.write('<head><meta charset="utf-8"/></head>');
-  response.write('<h1></h1>');
-  response.write('<b></b>');
+
+  res.write('<head>');
+  res.write('<title>NodeJS-dev nodeServer</title>');
+  res.write('<meta charset="utf-8"/>');
+  res.write('</head>');
+
+  response.write(`<h1>this is nodeServer.js, port ${port}</h1>`);
   response.end();
-}).listen(3000);
-console.log("Server running at http://localhost:3000/");
+}).listen(port);
+console.log(`nodeServer running at http://localhost:${port}/`);

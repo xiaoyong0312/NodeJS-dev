@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var fs = require("fs");
-//import Immutable from 'immutable';
 var Immutable = require("immutable");
 
 var server = app.listen(3010, function () {
@@ -14,7 +13,7 @@ var server = app.listen(3010, function () {
   console.log("http://" + address.get('address') + address.get('port'));
 });
 
-//---//服务主页 http://127.0.0.1:3010/ 如果要返回完整的页面(纯html/react),还需完善...
+//---//服务主页 http://localhost:3010/ 如果要返回完整的页面(纯html/react),还需完善...
 app.get('/', (req, res)=> {
   res.setHeader('Content-Type', 'text/html');
   res.writeHead(200, {"Content-Type": "text/html;charset:utf-8"});
@@ -29,7 +28,7 @@ app.get('/', (req, res)=> {
   res.end();
 });
 
-//---//获取用户列表 http://127.0.0.1:3010/listUsers
+//---//获取用户列表 http://localhost:3010/listUsers
 app.get('/listUsers', function (req, res) {
   fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
     /*console.log('data-->\n' + data);
@@ -43,7 +42,7 @@ app.get('/listUsers', function (req, res) {
   });
 })
 
-//---//添加用户 http://127.0.0.1:3010/addUser
+//---//添加用户 http://localhost:3010/addUser
 //添加的新用户数据
 var user = {
   "user4": {
@@ -66,7 +65,7 @@ app.get('/addUser', function (req, res) {
   });
 })
 
-//---//显示用户详情 http://127.0.0.1:3010/getDetails/2
+//---//显示用户详情 http://localhost:3010/getDetails/2
 app.get('/getDetails/:id', function (req, res) {
   // 首先我们读取已存在的用户
   fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
@@ -77,7 +76,7 @@ app.get('/getDetails/:id', function (req, res) {
   });
 })
 
-//---//删除用户  http://127.0.0.1:3010/deleteUser/4
+//---//删除用户  http://localhost:3010/deleteUser/4
 app.get('/deleteUser/:id', function (req, res) {
   // First read existing users.
   fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
