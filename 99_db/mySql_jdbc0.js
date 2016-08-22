@@ -4,16 +4,12 @@
 
 var mySql = require('mysql');
 
-const connConfig = {
-  //mySql 连接信息；
-  host: '172.21.4.155',
-  port: 3306,
-  user: 'ehome',
-  password: 'root',
-  database: 'ehomedb'
-}
+//import ConnConfig, { mySqlConnConfig } from './conn-config';
 
-var conn = mySql.createConnection(connConfig);
+//var ConnConfig = require('./conn-config');
+var mySqlConnConfig = require('./conn-config').mySqlConnConfig();
+
+var conn = mySql.createConnection(mySqlConnConfig);
 
 conn.connect();
 
@@ -24,6 +20,8 @@ conn.query('SELECT * from tb_sub_aunt', (err, rows, fields)=> {
   //console.log('rows[1] is: ', rows[1]);
   //console.log('fields is: ', fields);
   console.log('\n');
+  console.warn('-->>');
+  console.info('===>>>');
 });
 
 conn.end();

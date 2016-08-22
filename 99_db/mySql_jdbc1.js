@@ -22,6 +22,7 @@ pool.getConnection((err, connection)=> {
     //console.log('rows is: ', rows);
     console.log('rows[0] is: ', rows[0]);
     //console.log('rows[1] is: ', rows[1]);
+    console.log('\n');
   });
 
   connection.release();

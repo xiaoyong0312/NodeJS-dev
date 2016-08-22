@@ -20,6 +20,7 @@ pool.on('connection', (connection)=> {
   connection.query('SELECT * from tb_sub_aunt', (err, values)=> {
     if (err) throw err;
     console.log('values[0]:' + values[0]);
+    console.log('\n');
   });
 
   connection.destroy();
