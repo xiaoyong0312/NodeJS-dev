@@ -1,24 +1,32 @@
-let mySql = require('mysql');
+/**
+ * createPool 方式 连接mysql;
+ */
 
-let conn = mySql.createConnection({
+var mySql = require('mysql');
+
+const connConfig = {
   //mySql 连接信息；
   host: '172.21.4.155',
   port: 3306,
   user: 'ehome',
   password: 'root',
   database: 'ehomedb'
+}
+
+var pool = mySql.createPool(connConfig);
+
+pool.getConnection((err, connection)=> {
+
+  connection.query('SELECT * from tb_sub_aunt', (err, rows)=> {
+    if (err) throw err;
+    //console.log('rows is: ', rows);
+    console.log('rows[0] is: ', rows[0]);
+    //console.log('rows[1] is: ', rows[1]);
+  });
+
+  connection.release();
+
+  //connection.destroy();
 });
 
-conn.table('xxxx').find(query).skip(0).limit(20)
-  .then(list = > console.log('results', list)
-)
-.
-catch(err = > console.log(err)
-)
-
-conn.table('xxxxx').update(query, update)
-  .then(ret = > console.log(ret)
-)
-.
-catch(err = > console.log(err)
-)
+//pool.end();
