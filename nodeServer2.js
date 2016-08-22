@@ -20,9 +20,11 @@ app.get('/', (req, res)=> {
   res.write('<head>');
   res.write('<title>NodeJS-dev nodeServer2</title>');
   res.write('<meta charset="utf-8"/>');
+  res.write('<link href="./images/NodeJS-dev-index-1.1.ico" rel="icon" type="image/x-icon"/>');
+  //res.write('<link href="http://pic.qianmi.com/astore/wei-store/images/bitbug_favicon64.ico" rel="icon" type="image/x-icon"/>');
   res.write('</head>');
 
   res.write(`<h1>this is nodeServer2.js index page, port ${address.get('port')} </h1>`);
   res.end();
 });
-console.log('nodeServer2 running at http://localhost:${port}/');
+console.log(`nodeServer2 running at http://localhost:${port}/`);
