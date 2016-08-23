@@ -1,0 +1,7 @@
+{
+  "host": "172.21.4.155",
+  "port": 3306,
+  "user": "ehome",
+  "password": "root",
+  "database": "ehomedb"
+}

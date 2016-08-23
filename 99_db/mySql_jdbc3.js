@@ -1,3 +1,4 @@
+'use strict';
 let mySql = require('mysql');
 
 let conn = mySql.createConnection({
@@ -9,10 +10,9 @@ let conn = mySql.createConnection({
   database: 'ehomedb'
 });
 
-conn.table('xxxx').find(query).skip(0).limit(20)
+conn.table('tb_sub_aunt').find(query).skip(0).limit(20)
   .then(list = > console.log('results', list)
-)
-.
+).
 catch(err = > console.log(err)
 )
 

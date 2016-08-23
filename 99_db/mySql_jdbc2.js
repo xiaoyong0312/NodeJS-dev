@@ -2,6 +2,7 @@
  * createPool event 方式 连接mysql;
  */
 
+'use strict';
 var mySql = require('mysql');
 
 const connConfig = {

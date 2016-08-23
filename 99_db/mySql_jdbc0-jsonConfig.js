@@ -1,13 +1,16 @@
 /**
- * createConnection 方式 连接mysql;
+ * createConnection + json 配置文件 方式 连接mysql;
  */
 
+'use strict';
 var mySql = require('mysql');
+var fsExtra = require('fs-extra');
+var path = require('path');
 
-//import ConnConfig, { mySqlConnConfig } from './conn-config';
+//var mySqlConnConfig = fsExtra.readFileSync(path.join(__dirname, connConfigName));
+//console.log('mySqlConnConfig-->>' + mySqlConnConfig);
 
-//var ConnConfig = require('./conn-config');
-var mySqlConnConfig = require('./conn-config').mySqlConnConfig();
+var mySqlConnConfig = fsExtra.readJsonSync(path.join(__dirname, 'conn-config.json'));
 
 var conn = mySql.createConnection(mySqlConnConfig);
 
