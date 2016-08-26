@@ -9,15 +9,15 @@ var AutoOpenServerIndexPage = module.exports = {};
 
 AutoOpenServerIndexPage.openBrowser = (_port)=> {
   console.log('_port-->> ' + _port);
+  serverIndex = `${serverIndex}${_port}/`;
 
-  if (_port == '' || _port == '') {
-    _port = `3000`;
+  if (_port == '' || _port == 'undefined') {
+    //_port = `3000`;
+    console.log(`Err, default open, your port is null...`);
+  } else {
+    var workerProcess = child_process.spawn('open', [serverIndex]);
+
+    console.log(`Hi, success open ${serverIndex} in browser...`);
   }
 
-  serverIndex = `${serverIndex}${_port}/`;
-  var workerProcess = child_process.spawn('open', [serverIndex]);
-
-  console.log(`Hi, success open ${serverIndex} in browser...`);
-
 }
-
