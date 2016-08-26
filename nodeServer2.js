@@ -1,17 +1,20 @@
-var express = require('express');
-var app = express();
-var Immutable = require('Immutable');
-var AutoOpenServerIndexPage = require('./service/auto-open-server-index-page');
-var port = 3002;
-var serverIndex = `http://localhost:${port}/`;
+'use strict';
+let express = require('express');
+let app = express();
+let Immutable = require('Immutable');
+//import AutoOpenServerIndexPage2, { openBrowser } from './utils/auto-open-server-index-page2';
+let AutoOpenServerIndexPage2 = require('./utils/auto-open-server-index-page2');
+let openBrowser = AutoOpenServerIndexPage2.openBrowser;
+let port = 3002;
+let serverIndex = `http://localhost:${port}/`;
 
 /**
  * @desc express 的方式创建 nodejs 服务端;
  */
-var server = app.listen(port, ()=> {
+let server = app.listen(port, ()=> {
 });
 console.log('server.address()-->>' + Immutable.fromJS(server.address()));
-var address = Immutable.fromJS(server.address());
+let address = Immutable.fromJS(server.address());
 console.log("http://" + address.get('address') + address.get('port'));
 
 //---//服务主页 http://localhost:3002/ 如果要返回完整的页面(纯html/react),还需完善...
@@ -33,4 +36,4 @@ console.log(`nodeServer2 running at ${serverIndex}`);
 
 console.log(`open ${serverIndex} in browser, please waiting seconds ...`);
 
-AutoOpenServerIndexPage.openBrowser(port);
+openBrowser(port);

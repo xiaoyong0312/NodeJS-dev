@@ -1,5 +1,6 @@
+'use strict';
 var http = require('http');
-var AutoOpenServerIndexPage = require('./service/auto-open-server-index-page');
+var AutoOpenServerIndexPage = require('./utils/auto-open-server-index-page');
 var port = 3001;
 var serverIndex = `http://localhost:${port}/`;
 
