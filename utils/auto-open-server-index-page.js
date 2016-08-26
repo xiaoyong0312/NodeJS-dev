@@ -65,12 +65,8 @@ AutoOpenServerIndexPage.getCommandByOS = (osType)=> {
   return osCommandText;
 }
 
-console.log('AutoOpenServerIndexPage.__proto__-->>' + AutoOpenServerIndexPage.__proto__);
-console.log('AutoOpenServerIndexPage.prototype-->>' + AutoOpenServerIndexPage.prototype);
-
 var getOS = AutoOpenServerIndexPage.getOS();
 var getCommandByOS = AutoOpenServerIndexPage.getCommandByOS();
-//var {getOS, getCommandByOS} = AutoOpenServerIndexPage.props;
 
 console.log('getOS-->>' + getOS);
 console.log('getCommandByOS-->>' + getCommandByOS);
@@ -85,6 +81,6 @@ AutoOpenServerIndexPage.openBrowser = (_port)=> {
     console.log(`Err, default open, your port is null...`);
   } else {
     var workerProcess = child_process.spawn(`${getCommandByOS}`, [serverIndex]);
-    console.log(`Hi, success open ${serverIndex} in browser...`);
+    console.log(`Hi, success open ${serverIndex} in browser !`);
   }
 }

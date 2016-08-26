@@ -13,7 +13,7 @@ module.exports = {
   getOS,
   getCommandByOS,
   openBrowser
-}
+};
 
 /**
  * @desc 获取 系统类型;
@@ -82,6 +82,6 @@ function openBrowser(_port) {
     console.log(`Err, default open, your port is null...`);
   } else {
     let workerProcess = child_process.spawn(`${getCommandByOS()}`, [serverIndex]);
-    console.log(`Hi, success open ${serverIndex} in browser...`);
+    console.log(`Hi, success open ${serverIndex} in browser !`);
   }
 }
