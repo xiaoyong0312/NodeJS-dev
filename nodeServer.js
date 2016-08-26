@@ -13,3 +13,7 @@ http.createServer(function (request, response) {
   response.end();
 }).listen(port);
 console.log(`nodeServer running at http://localhost:${port}/`);
+
+console.log(`open http://localhost:${port}/ in browser ...`);
+
+//window.location.replace(`http://localhost:${port}/`);
