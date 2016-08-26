@@ -1,0 +1,20 @@
+'use strict';
+var os = require('os');
+
+console.log('os.-->>', os.EOL);
+console.log('os.-->>', os.arch());
+console.log('os.-->>', os.constants);
+console.log('os.-->>\n', os.cpus());
+console.log('os.-->>', os.endianness());
+console.log('os.-->>', os.freemem());
+console.log('os.-->>', os.homedir());
+console.log('os.-->>', os.hostname());
+console.log('os.-->>', os.loadavg());
+console.log('os.-->>', os.networkInterfaces());
+console.log('os.-->>', os.platform());
+console.log('os.-->>', os.release());
+console.log('os.-->>', os.tmpdir());
+console.log('os.-->>', os.totalmem());
+console.log('os.-->>', os.type());
+console.log('os.-->>', os.uptime());
+//console.log('os.-->>'+os.userInfo([options]));
