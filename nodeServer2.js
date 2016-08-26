@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
 var Immutable = require('Immutable');
+var AutoOpenServerIndexPage = require('./service/auto-open-server-index-page');
 var port = 3002;
+var serverIndex = `http://localhost:${port}/`;
 
 /**
  * @desc express 的方式创建 nodejs 服务端;
@@ -27,4 +29,8 @@ app.get('/', (req, res)=> {
   res.write(`<h1>this is nodeServer2.js index page, port ${address.get('port')} </h1>`);
   res.end();
 });
-console.log(`nodeServer2 running at http://localhost:${port}/`);
+console.log(`nodeServer2 running at ${serverIndex}`);
+
+console.log(`open ${serverIndex} in browser, please waiting seconds ...`);
+
+AutoOpenServerIndexPage.openBrowser(port);
