@@ -1,11 +1,12 @@
 'use strict';
 let express = require('express');
 let app = express();
-let Immutable = require('Immutable');
+let Immutable = require('immutable');
 //import AutoOpenServerIndexPage2, { openBrowser } from './utils/auto-open-server-index-page2';
 let AutoOpenServerIndexPage2 = require('./utils/auto-open-server-index-page2');
 let openBrowser = AutoOpenServerIndexPage2.openBrowser;
 let port = 3002;
+//let port = process.env.PORT || 3002;
 let serverIndex = `http://localhost:${port}/`;
 
 /**
