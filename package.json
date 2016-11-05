@@ -2,13 +2,20 @@
   "name": "NodeJS-dev",
   "version": "0.0.1",
   "description": "NodeJS-dev test examples",
-  "script": {
+  "scripts": {
+    "dev": "node ./nodeServer.js",
+    "dev1": "node ./nodeServer1.js",
+    "dev2": "node ./nodeServer2.js",
+    "dev3": "node ./nodeServer3.js",
+    "dev4": "node ./nodeServer4.js",
+    "": "",
     "build": "npm install && webpack --webpack.config.js -w",
-    "product": "npm install && webpack --webpack.config.js",
-    "test": "npm install && webpack --webpack.config.js"
+    "product": "npm install && webpack --webpack.config.js"
   },
   "dependencies": {
+    "body-parser": "1.15.2",
     "classnames": "^2.1.3",
+    "cookie-parser": "1.4.3",
     "express": "^4.13.4",
     "fs": "^0.0.2",
     "fs-extra": "^0.26.2",
@@ -16,10 +23,12 @@
     "iflux": "^1.1.5",
     "immutable": "^3.7.4",
     "mocha": "2.3.4",
+    "multer": "1.2.0",
+    "node-import": "0.9.2",
     "react": "^0.14.3",
     "scriptjs": "2.5.7",
     "should": "8.1.1",
-    "webpack": "1.9.1"
+    "webpack": "^1.13.1"
   },
   "repository": {
     "type": "git",
